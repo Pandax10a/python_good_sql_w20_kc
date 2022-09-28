@@ -13,8 +13,8 @@ def just_connect():
     cursor = conn.cursor()
     return cursor
 
-def cursor_result(cursor, the_procedure):
-    cursor.execute(the_procedure)
+def cursor_result(cursor, the_procedure, list_of_args=[]):
+    cursor.execute(the_procedure, list_of_args)
     result = cursor.fetchall()
     return result
 
